@@ -12,7 +12,7 @@ export const App = () => {
 	const [selectedPage, setSelectedPage] = useState('Pages List')
 	const [newPage, setNewPage] = useState({title: '', content: '', status: '', name: ''})
 	const [currentPage, setCurrentPage] = useState({})
-	const [articleData, setArticleData] = useState('apple')
+	const [articleData, setArticleData] = useState({})
 
 	async function fetchPages(){
 		try {
@@ -45,7 +45,6 @@ export const App = () => {
 					pages={pages} 
 					key={idx} 
 					setSelectedPage={setSelectedPage} 
-					currentPage={currentPage} 
 					setCurrentPage={setCurrentPage} 
 					setArticleData={setArticleData}/>)}
 				</div>
@@ -56,7 +55,7 @@ export const App = () => {
 			<main>
 				<h1>WikiVerse</h1>
 				<h2>Add Your Very Own Page!</h2>
-				<AddPage newPage={newPage} setNewPage={setNewPage} selectedPage={selectedPage} setSelectedPage={setSelectedPage}/>
+				<AddPage newPage={newPage} setNewPage={setNewPage} setSelectedPage={setSelectedPage}/>
 			</main>
 		)
 	}
@@ -65,7 +64,7 @@ export const App = () => {
 		return(
 			<main>
 				<h1>WikiVerse</h1>
-				<Page setSelectedPage={setSelectedPage} currentPage={currentPage} fetchPages={fetchPages} articleData={articleData} setArticleData={setArticleData}/>
+				<Page setSelectedPage={setSelectedPage} currentPage={currentPage} fetchPages={fetchPages} articleData={articleData}/>
 			</main>
 		)
 	}

@@ -44,8 +44,8 @@ export const AddPage = ({
                 <input type='text' name='title' value={ newPage.title } onChange={handleChange}/>
                 <input type='text' name='content'  value={ newPage.content } onChange={handleChange}/>
                 <input type='text' name='status' value={ newPage.status } onChange={handleChange}/>
-                {/* <input type='text' name='name' value={ newPage.name } onChange={handleChange}/> */}
-                {/* <input type='text' name='email' value={ newPage.email } onChange={handleChange}/> */}
+                <input type='text' name='name' value={ newPage.name } onChange={handleChange}/>
+                <input type='text' name='email' value={ newPage.email } onChange={handleChange}/>
                 <button type='submit'>Submit</button>
                 <button onClick={handleBackButton}>Back to Main</button>
             </form>
